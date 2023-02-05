@@ -1,0 +1,29 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+  margin: 10px 0;
+}
+main p{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  padding: 10px 0;
+}
+
+p strong{
+  width: 200px;
+}
+
+main span{
+  color: cornflowerblue;
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página inicial</title>
+</head>
+<body>
+  <header>
+    <i>Perguntas e Respostas</i>
+  </header>
+  <main>
+    <h1>Perguntas e Respostas</h1>
+    <hr>
+    <section>
+      <ul>
+        <li>
+          <p>Primeira pergunta
+            <!-- importando as variáveis do index.js -->
+            <%= nome %>
+            <%= idade %>
+            <%= lang %>
+          </p>
+          <button>Abrir</button>
+        </li>
+      </ul>
+    </section>
+
+    <% if(msg) {%>
+    <h3>mensagem exibida!</h3>
+    <%}%>
+  </main>
+ 
+</body>
+</html>

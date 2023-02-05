@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página inicial</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+  <main>
+    <% if(msg) {%>
+    <h3>mensagem exibida!</h3>
+    <%}%>
+      <h1>Carrinho :</h1>
+      <hr>
+    <% products.forEach(element => {%>
+      <p><strong>produto : <%=element.name%></strong> <span> preço : R$ <%=element.price%></span></p>
+      <hr>
+    <%}) %>
+  </main>
+ 
+</body>
+</html>

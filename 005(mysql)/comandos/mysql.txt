@@ -1,0 +1,43 @@
+[COMANDOS]
+
+( mysql -h localhost -u root -p ) => inicia o mysql 
+
+( SHOW DATABASES; ) => mostra os bancos de dados dos seu mysql.
+
+( CREATE DATABASE nomeDoBancoDeDados; ) => cria um novo banco de dados.
+
+( USE nomeDoBancoDeDados; ) => entra no banco de dados referido.
+
+(
+ CREATE TABLE usuarios(
+  -- 50 DELIMITA O MÁXIMO DE CARACTERES NA TABELA
+  nome VARCHAR(50),
+  email VARCHAR(50),
+  idade INT
+); 
+) => cria uma tabela usuarios com as colunas e tipos referidos.
+
+( SHOW TABLES; ) => mostra as tabelas do banco de dados.
+
+( DESCRIBE nomeDaTabela; ) => mostra as informações da tabela.
+
+(
+INSERT INTO usuarios(nome, email, idade) VALUES(
+  "Herbert Duarte", 
+  "herbertduarte.teste@email.com", 
+  20
+);
+)=> insere os dadaos nas colunas respectivamente e cria uma linha.
+
+( SHOW * FROM nomeDaTabela ) => mostra todos os dados da tabela
+ 
+( SELECT * FROM nomeDaTabela WERE (condição ex: idade > 18) ) => Seleciona todos (*) os elementos da tabela que satisfazem a condição.
+
+
+( DELETE FROM nomeDaTabela ) => deleta todos os registros da tabela.
+
+( DELETE FROM nomeDaTabela WHERE (condição) ) => deleta apenas os registros que satisfazem a condição.
+
+( UPDATE nomedatabela SET nome = "Novo Nome" ) => altera todos os nomes dos items da tabela.
+
+( UPDATE nomedatabela SET nome = "Novo Nome" WHERE condição ) => atualiza apenas os dados dos items que satisfazem a condição
