@@ -19,3 +19,18 @@ body{
   font-weight: 500;
   color: #3b3c3d;
 }
+
+#orange{
+  background-color: #FBAE29;
+  outline: #FBAE29;
+  border: #FBAE29;
+}
+
+h4{
+  font-weight: 400;
+}
+
+nav{
+  border-bottom: 1px solid #3b3c3d21;
+  margin-bottom: 10px;
+}
