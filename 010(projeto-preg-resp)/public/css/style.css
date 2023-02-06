@@ -1,0 +1,21 @@
+body{
+  background-color: #eee;
+}
+
+#logo{
+  height: 40px;
+}
+
+#logo-link{
+  display: flex;
+  justify-content: start;
+  flex-direction: row;
+  align-items: center;
+  text-decoration: none;
+}
+
+#logo-link span{
+  font-size: 1.4em;
+  font-weight: 500;
+  color: #3b3c3d;
+}
