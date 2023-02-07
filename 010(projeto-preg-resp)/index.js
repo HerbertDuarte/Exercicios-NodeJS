@@ -1,7 +1,10 @@
+// imports
+
 const express = require('express')
 const app = express()
 const bodyParser = require('body-parser')
 const connection = require('./database/database')
+var perguntaModel = require('./database/Perguntas')
 
 // conexão com o banco de dados
 
@@ -27,20 +30,31 @@ app.use(bodyParser.json())
 
 // rotas
 app.get('/', (req, res)=>{
-  res.render('index')
+  // busca todas as perguntas do model pergunta (raw : true => mostra apenas os dados crus da tabela)
+  perguntaModel.findAll({raw : true}).then(perguntas => {
+    res.render('index', {
+      perguntas
+    })
+  })
 })
 
 app.get('/perguntar', (req, res)=>{
   res.render('perguntar')
 })
 
-app.post('/form', (req,res)=>{
+app.post('/salvarPergunta', (req,res)=>{
   let titulo = req.body.titulo
   let comentario = req.body.comentario
+  perguntaModel.create({
+    titulo,
+    comentario
+  }).then(() => {
+    console.log('dados enviados com sucesso!')
+    res.redirect('/')
+  }).catch((err)=>{
+    console.log('envio falhou, erro : ' + err)
+  })
 
-  module.exports = {titulo, comentario}
-
-  res.render('success')
 })
 
 app.listen(4000, (error)=>{

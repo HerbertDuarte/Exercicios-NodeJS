@@ -18,12 +18,24 @@ body{
   font-size: 1.4em;
   font-weight: 500;
   color: #3b3c3d;
+  margin-left: 5px;
 }
 
 #orange{
   background-color: #FBAE29;
   outline: #FBAE29;
   border: #FBAE29;
+}
+
+.box-text{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+
+.card{
+  margin: 10px 0;
 }
 
 h4{

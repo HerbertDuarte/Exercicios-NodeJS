@@ -3,7 +3,27 @@
   <%- include ('./parcials/head.ejs')%>
 <body>
   <%- include ('./parcials/header.ejs')%>
-  <%- include ('./parcials/index-body.ejs')%>
+  <div class="container">
+    <div class="box-text">
+      <h2>Perguntas</h2>
+      <a href="/perguntar" id="orange" class="btn btn-primary">Perguntar</a>
+    </div>
+    <% perguntas.forEach( pergunta => { %>
+    <div class="card">
+        <div class="card-header">
+          <h4>
+            <%= pergunta.titulo%>
+          </h4>
+        </div>
+        <div class="card-body">
+          <p>
+            <%= pergunta.comentario%>
+          </p>
+        </div>
+        <div class="card-footer"><a href="#" id="orange" class="btn btn-primary">Responder</a></div>
+      </div>
+      <%})%>
+  </div>
 </body>
 <%- include ('./parcials/foot.ejs')%>
 </html>
