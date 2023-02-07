@@ -6,9 +6,9 @@
     </div>
 
     <div class="card-body">
-      <form>
-        <input placeholder="Título" type="text" class="form-control">
-        <textarea placeholder="Digite sua pergunta" cols="30" rows="6" style="resize: none;" class="form-control"></textarea>
+      <form method="POST" action="/form">
+        <input name="titulo" placeholder="Título" type="text" class="form-control">
+        <textarea name="comentario" placeholder="Digite sua pergunta" cols="30" rows="6" style="resize: none;" class="form-control"></textarea>
         <button id="orange" class="btn btn-primary">Perguntar</button>
       </form>
     </div>
